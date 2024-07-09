@@ -1,0 +1,203 @@
+{
+  "collection": "quotes_categories",
+  "meta": {
+    "accountability": "all",
+    "archive_app_filter": true,
+    "archive_field": null,
+    "archive_value": null,
+    "collapse": "open",
+    "collection": "quotes_categories",
+    "color": null,
+    "display_template": null,
+    "group": null,
+    "hidden": true,
+    "icon": "import_export",
+    "item_duplication_fields": null,
+    "note": null,
+    "preview_url": null,
+    "singleton": false,
+    "sort": null,
+    "sort_field": null,
+    "translations": null,
+    "unarchive_value": null,
+    "versioning": false
+  },
+  "schema": {
+    "name": "quotes_categories"
+  },
+  "fields": [
+    {
+      "field": "categories_id",
+      "type": "integer",
+      "meta": {
+        "collection": "quotes_categories",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "categories_id",
+        "group": null,
+        "hidden": true,
+        "interface": null,
+        "note": null,
+        "options": null,
+        "readonly": false,
+        "required": false,
+        "sort": 3,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      },
+      "schema": {
+        "name": "categories_id",
+        "table": "quotes_categories",
+        "data_type": "integer",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": "categories",
+        "foreign_key_column": "id"
+      }
+    },
+    {
+      "field": "id",
+      "type": "integer",
+      "meta": {
+        "collection": "quotes_categories",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "id",
+        "group": null,
+        "hidden": true,
+        "interface": null,
+        "note": null,
+        "options": null,
+        "readonly": false,
+        "required": false,
+        "sort": 1,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      },
+      "schema": {
+        "name": "id",
+        "table": "quotes_categories",
+        "data_type": "integer",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": false,
+        "is_unique": false,
+        "is_primary_key": true,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": true,
+        "foreign_key_table": null,
+        "foreign_key_column": null
+      }
+    },
+    {
+      "field": "quotes_id",
+      "type": "integer",
+      "meta": {
+        "collection": "quotes_categories",
+        "conditions": null,
+        "display": null,
+        "display_options": null,
+        "field": "quotes_id",
+        "group": null,
+        "hidden": true,
+        "interface": null,
+        "note": null,
+        "options": null,
+        "readonly": false,
+        "required": false,
+        "sort": 2,
+        "special": null,
+        "translations": null,
+        "validation": null,
+        "validation_message": null,
+        "width": "full"
+      },
+      "schema": {
+        "name": "quotes_id",
+        "table": "quotes_categories",
+        "data_type": "integer",
+        "default_value": null,
+        "max_length": null,
+        "numeric_precision": null,
+        "numeric_scale": null,
+        "is_nullable": true,
+        "is_unique": false,
+        "is_primary_key": false,
+        "is_generated": false,
+        "generation_expression": null,
+        "has_auto_increment": false,
+        "foreign_key_table": "quotes",
+        "foreign_key_column": "id"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "field": "categories_id",
+      "related_collection": "categories",
+      "meta": {
+        "junction_field": "quotes_id",
+        "many_collection": "quotes_categories",
+        "many_field": "categories_id",
+        "one_allowed_collections": null,
+        "one_collection": "categories",
+        "one_collection_field": null,
+        "one_deselect_action": "nullify",
+        "one_field": null,
+        "sort_field": null
+      },
+      "schema": {
+        "table": "quotes_categories",
+        "column": "categories_id",
+        "foreign_key_table": "categories",
+        "foreign_key_column": "id",
+        "constraint_name": null,
+        "on_update": "NO ACTION",
+        "on_delete": "SET NULL"
+      }
+    },
+    {
+      "field": "quotes_id",
+      "related_collection": "quotes",
+      "meta": {
+        "junction_field": "categories_id",
+        "many_collection": "quotes_categories",
+        "many_field": "quotes_id",
+        "one_allowed_collections": null,
+        "one_collection": "quotes",
+        "one_collection_field": null,
+        "one_deselect_action": "nullify",
+        "one_field": "categories",
+        "sort_field": null
+      },
+      "schema": {
+        "table": "quotes_categories",
+        "column": "quotes_id",
+        "foreign_key_table": "quotes",
+        "foreign_key_column": "id",
+        "constraint_name": null,
+        "on_update": "NO ACTION",
+        "on_delete": "SET NULL"
+      }
+    }
+  ]
+}
